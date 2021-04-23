@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>List of all cars</title>
+</head>
+<body>
+<h1>Carlist</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Platenumber</th>
+        <th>CarTier</th>
+        <th>Brand and model</th>
+        <th>Fuel type</th>
+        <th>Registration date</th>
+        <th>Odometer</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cars: ${cars}">
+        <td th:text="${cars.platenumber}" />
+        <td th:text="${cars.cartier}" />
+        <td th:text="${cars.brandAndModel}" />
+        <td th:text="${cars.fuelType}" />
+        <td th:text="${cars.date}" />
+        <td th:text="${cars.odometer}" />
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
