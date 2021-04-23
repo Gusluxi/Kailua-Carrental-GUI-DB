@@ -15,9 +15,7 @@ public class HomeController {
 
 
     @GetMapping("/")
-    public String index(Model model){
-        List<Car> carList = carRepo.fetchAll();
-        model.addAttribute("cars", carList);
+    public String index(){
         return "home/index";
     }
 
