@@ -1,0 +1,9 @@
+#box {
+    background-color: cornflowerblue;
+    height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    padding: 4px;
+    margin: auto;
+
+}

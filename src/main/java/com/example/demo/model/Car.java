@@ -1,28 +1,38 @@
 package com.example.demo.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
 
 @Entity
 public class Car {
+
     @Id
     private String platenumber;
     private String cartier;
     private String brandAndModel;
     private String fuelType;
-    private int date;
+    private Date registrationDate;
     private int odometer;
 
 
     public Car() {
     }
 
-    public Car(String platenumber, String cartier, String brandAndModel, String fuelType, int date, int odometer) {
+    public Car(String platenumber, String cartier, String brandAndModel, String fuelType, Date registrationDate, int odometer) {
         this.platenumber = platenumber;
         this.cartier = cartier;
         this.brandAndModel = brandAndModel;
         this.fuelType = fuelType;
-        this.date = date;
+        this.registrationDate = registrationDate;
         this.odometer = odometer;
     }
 
@@ -58,12 +68,12 @@ public class Car {
         this.fuelType = fuelType;
     }
 
-    public int getDate() {
-        return date;
+    public Date getRegistrationDate() {
+        return registrationDate;
     }
 
-    public void setDate(int date) {
-        this.date = date;
+    public void setRegistrationDate(Date registrationDate) {
+        this.registrationDate = registrationDate;
     }
 
     public int getOdometer() {
