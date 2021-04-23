@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Date;
+
 
 @Entity
 public class Car {
@@ -20,20 +23,11 @@ public class Car {
     private String cartier;
     private String brandAndModel;
     private String fuelType;
-    private Date registrationDate;
+    private LocalDate registrationDate;
     private int odometer;
 
 
     public Car() {
-    }
-
-    public Car(String platenumber, String cartier, String brandAndModel, String fuelType, Date registrationDate, int odometer) {
-        this.platenumber = platenumber;
-        this.cartier = cartier;
-        this.brandAndModel = brandAndModel;
-        this.fuelType = fuelType;
-        this.registrationDate = registrationDate;
-        this.odometer = odometer;
     }
 
     public String getPlatenumber() {
@@ -68,11 +62,11 @@ public class Car {
         this.fuelType = fuelType;
     }
 
-    public Date getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return registrationDate;
     }
 
-    public void setRegistrationDate(Date registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
 
@@ -82,5 +76,17 @@ public class Car {
 
     public void setOdometer(int odometer) {
         this.odometer = odometer;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "platenumber='" + platenumber + '\'' +
+                ", cartier='" + cartier + '\'' +
+                ", brandAndModel='" + brandAndModel + '\'' +
+                ", fuelType='" + fuelType + '\'' +
+                ", date=" + registrationDate +
+                ", odometer=" + odometer +
+                '}';
     }
 }
