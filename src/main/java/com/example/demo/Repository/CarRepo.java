@@ -1,4 +1,4 @@
-package com.example.demo.Repository;
+package com.example.demo.repository;
 
 import com.example.demo.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
