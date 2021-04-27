@@ -16,6 +16,7 @@ public class ContractRepo {
     JdbcTemplate template;
 
     public List<Contract> fetchAll() {
+        System.out.println("FetchAll Method starting");
         String sql = "SELECT * FROM contracts";
         RowMapper<Contract> rowMapper = new BeanPropertyRowMapper<>(Contract.class);
         return template.query(sql, rowMapper);

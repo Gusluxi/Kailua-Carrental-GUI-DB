@@ -17,7 +17,9 @@ import java.util.List;
 public class HomeController {
     @Autowired
     CarRepo carRepo;
+    @Autowired
     ContractRepo contractRepo;
+    @Autowired
     CustomerRepo customerRepo;
 
 
@@ -46,8 +48,7 @@ public class HomeController {
     public String viewCustomers(Model model) {
         List<Customer> customerList = customerRepo.fetchAll();
         model.addAttribute("customers", customerList);
-        System.out.println(carRepo.fetchAll());
+        System.out.println(customerRepo.fetchAll());
         return "home/viewCustomers";
     }
-
 }
