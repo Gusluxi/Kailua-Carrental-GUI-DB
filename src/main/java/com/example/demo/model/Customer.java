@@ -12,7 +12,7 @@ public class Customer {
     private String name;
     private int mobilePhone;
     private String email;
-    private String driverLicense;
+    private String driverLicence;
     private LocalDate driverSinceDate;
     private int addressID;
 
@@ -23,8 +23,8 @@ public class Customer {
         return customerID;
     }
 
-    public void setCustomerID(int customerid) {
-        this.customerID = customerid;
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
     public String getName() {
@@ -51,12 +51,12 @@ public class Customer {
         this.email = email;
     }
 
-    public String getDriverLicense() {
-        return driverLicense;
+    public String getDriverLicence() {
+        return driverLicence;
     }
 
-    public void setDriverLicense(String driverLicense) {
-        this.driverLicense = driverLicense;
+    public void setDriverLicence(String driverLicense) {
+        this.driverLicence = driverLicense;
     }
 
     public LocalDate getDriverSinceDate() {
@@ -71,8 +71,8 @@ public class Customer {
         return addressID;
     }
 
-    public void setAddressID(int addressid) {
-        this.addressID = addressid;
+    public void setAddressID(int addressID) {
+        this.addressID = addressID;
     }
 
 }
