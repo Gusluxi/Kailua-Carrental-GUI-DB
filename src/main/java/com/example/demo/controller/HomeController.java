@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 import com.example.demo.Repository.CarRepo;
 import com.example.demo.Repository.ContractRepo;
+import com.example.demo.Repository.CustomerRepo;
 import com.example.demo.model.Car;
 import com.example.demo.model.Contract;
+import com.example.demo.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,7 @@ public class HomeController {
     @Autowired
     CarRepo carRepo;
     ContractRepo contractRepo;
+    CustomerRepo customerRepo;
 
 
     @GetMapping("/")
@@ -41,7 +44,7 @@ public class HomeController {
 
     @GetMapping ("/viewCustomers")
     public String viewCustomers(Model model) {
-        List<Car> customerList = carRepo.fetchAll();
+        List<Customer> customerList = customerRepo.fetchAll();
         model.addAttribute("customers", customerList);
         System.out.println(carRepo.fetchAll());
         return "home/viewCustomers";
