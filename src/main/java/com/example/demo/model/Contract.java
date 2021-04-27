@@ -2,7 +2,6 @@ package com.example.demo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.sql.Date;
 import java.time.LocalDate;
 
 @Entity
