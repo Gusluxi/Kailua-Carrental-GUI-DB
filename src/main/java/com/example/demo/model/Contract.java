@@ -15,6 +15,7 @@ public class Contract {
     private int customerID;
     private String plateNumber;
 
+    you suck bro...
 
 
 }
