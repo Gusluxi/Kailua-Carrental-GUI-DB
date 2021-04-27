@@ -39,4 +39,12 @@ public class HomeController {
         return "home/viewContracts";
     }
 
+    @GetMapping ("/viewCustomers")
+    public String viewCustomers(Model model) {
+        List<Car> customerList = carRepo.fetchAll();
+        model.addAttribute("customers", customerList);
+        System.out.println(carRepo.fetchAll());
+        return "home/viewCustomers";
+    }
+
 }

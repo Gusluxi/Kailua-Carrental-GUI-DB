@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>List of all cars</title>
+    <link rel="stylesheet" type="text/css" href="viewCustomersCSS.css">
+</head>
+<body>
+<h1>Customerlist</h1>
+<table>
+    <thead>
+    <tr>
+        <th>CustomerID</th>
+        <th>Name</th>
+        <th>MobilePhone</th>
+        <th>Email</th>
+        <th>DriverLicense</th>
+        <th>DriverSinceDate</th>
+        <th>AddressID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customers: ${customers}">
+        <td th:text="${customers.customerID}" />
+        <td th:text="${customers.name}"/>
+        <td th:text="${customers.mobilePhone}" />
+        <td th:text="${customers.email}" />
+        <td th:text="${customers.driverLicense}"/>
+        <td th:text="${customers.driverSinceDate}"/>
+        <td th:text="${customers.addressID}"/>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
