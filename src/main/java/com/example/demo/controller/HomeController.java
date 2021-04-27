@@ -33,7 +33,7 @@ public class HomeController {
 
     @GetMapping ("/viewContracts")
     public String viewContracts(Model model) {
-        List<Contract> contractList = ContractRepo.fetchAll();
+        List<Contract> contractList = contractRepo.fetchAll();
         model.addAttribute("contracts", contractList);
         System.out.println(contractRepo.fetchAll());
         return "home/viewContracts";
