@@ -18,7 +18,7 @@ public class Contract {
     public Contract() {
     }
 
-    public int getContractID() {return contractID; }
+    public int getContractID() {return contractID;}
 
     public void setContractID(int contractID) {this.contractID = contractID; }
 
