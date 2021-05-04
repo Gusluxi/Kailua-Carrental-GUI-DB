@@ -62,6 +62,7 @@ public class HomeController {
         return "home/viewCustomers";
     }
 
+
     @GetMapping("/createContract")
     public String create(){
         return "home/createContract";

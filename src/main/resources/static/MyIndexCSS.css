@@ -1,9 +1,14 @@
 #box {
     background-color: cornflowerblue;
-    height: 400px;
-    width: 606px;
+    height: 500px;
+    width: 800px;
     border: 1px solid black;
     padding: 4px;
     margin: auto;
+}
 
+#center {
+    text-align: center;
+    margin: auto;
+    width: 50%;
 }
