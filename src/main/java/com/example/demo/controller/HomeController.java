@@ -61,11 +61,8 @@ public class HomeController {
         return "home/viewCustomers";
     }
 
-
     @GetMapping("/createContract")
-    public String create(){
-        return "home/createContract";
-    }
+    public String create() { return "home/createContract"; }
     @PostMapping("/createContract")
     public String create(@ModelAttribute Contract contract){
         contractService.addContract(contract);
