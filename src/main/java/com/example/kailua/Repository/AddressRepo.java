@@ -1,6 +1,6 @@
-package com.example.demo.Repository;
+package com.example.kailua.Repository;
 
-import com.example.demo.model.Car;
+import com.example.kailua.Model.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,14 +10,14 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class CarRepo {
+public class AddressRepo {
 
     @Autowired
     JdbcTemplate template;
 
-    public List<Car> fetchAll() {
-        String sql = "SELECT * FROM cars";
-        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
+    public List<Address> fetchAll() {
+        String sql = "SELECT * FROM address";
+        RowMapper<Address> rowMapper = new BeanPropertyRowMapper<>(Address.class);
         return template.query(sql, rowMapper);
     }
 }

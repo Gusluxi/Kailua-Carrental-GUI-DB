@@ -1,7 +1,7 @@
-package com.example.demo.Service;
+package com.example.kailua.Service;
 
-import com.example.demo.Repository.ContractRepo;
-import com.example.demo.model.Contract;
+import com.example.kailua.Repository.ContractRepo;
+import com.example.kailua.Model.Contract;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

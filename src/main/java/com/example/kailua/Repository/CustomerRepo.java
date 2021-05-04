@@ -1,7 +1,6 @@
-package com.example.demo.Repository;
+package com.example.kailua.Repository;
 
-import com.example.demo.model.Contract;
-import com.example.demo.model.Customer;
+import com.example.kailua.Model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
