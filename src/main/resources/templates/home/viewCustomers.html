@@ -16,7 +16,13 @@
         <th>Email</th>
         <th>DriverLicense</th>
         <th>DriverSinceDate</th>
+        <th>AddressIDc</th>
         <th>AddressID</th>
+        <th>Address</th>
+        <th>ZipcodeIDa</th>
+        <th>ZipcodeID</th>
+        <th>Zipcode</th>
+        <th>City</th>
     </tr>
     </thead>
     <tbody>
@@ -27,8 +33,13 @@
         <td th:text="${customers.email}" />
         <td th:text="${customers.driverLicence}"/>
         <td th:text="${customers.driverSinceDate}"/>
+        <td th:text="${customers.addressIDc}"/>
         <td th:text="${customers.addressID}"/>
-
+        <td th:text="${customers.address}"/>
+        <td th:text="${customers.zipcodeIDa}"/>
+        <td th:text="${customers.zipcodeID}"/>
+        <td th:text="${customers.zipcode}"/>
+        <td th:text="${customers.city}"/>
     </tr>
     </tbody>
 </table>

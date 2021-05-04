@@ -14,7 +14,13 @@ public class Customer {
     private String email;
     private String driverLicence;
     private LocalDate driverSinceDate;
+    private int addressIDc;
     private int addressID;
+    private String address;
+    private int zipcodeIDa;
+    private int zipcodeID;
+    private int zipcode;
+    private String city;
 
     public Customer() {
     }
@@ -75,4 +81,70 @@ public class Customer {
         this.addressID = addressID;
     }
 
+    public int getAddressIDc() {
+        return addressIDc;
+    }
+
+    public void setAddressIDc(int addressIDc) {
+        this.addressIDc = addressIDc;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getZipcodeIDa() {
+        return zipcodeIDa;
+    }
+
+    public void setZipcodeIDa(int zipcodeIDa) {
+        this.zipcodeIDa = zipcodeIDa;
+    }
+
+    public int getZipcodeID() {
+        return zipcodeID;
+    }
+
+    public void setZipcodeID(int zipcodeID) {
+        this.zipcodeID = zipcodeID;
+    }
+
+    public int getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerID=" + customerID +
+                ", name='" + name + '\'' +
+                ", mobilePhone=" + mobilePhone +
+                ", email='" + email + '\'' +
+                ", driverLicence='" + driverLicence + '\'' +
+                ", driverSinceDate=" + driverSinceDate +
+                ", addressIDc=" + addressIDc +
+                ", addressID=" + addressID +
+                ", address='" + address + '\'' +
+                ", zipcodeIDa=" + zipcodeIDa +
+                ", zipcodeID=" + zipcodeID +
+                ", zipcode=" + zipcode +
+                ", city='" + city + '\'' +
+                '}';
+    }
 }
