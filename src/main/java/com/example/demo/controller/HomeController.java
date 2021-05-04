@@ -40,7 +40,7 @@ public class HomeController {
     public String viewCars(Model model) {
         List<Car> carList = carService.fetchAll();
         model.addAttribute("cars", carList);
-        System.out.println(carService.fetchAll());
+        //System.out.println(carService.fetchAll());
         return "home/viewCars";
     }
 
@@ -48,7 +48,7 @@ public class HomeController {
     public String viewContracts(Model model) {
         List<Contract> contractList = contractService.fetchAll();
         model.addAttribute("contracts", contractList);
-        System.out.println(contractService.fetchAll());
+        //System.out.println(contractService.fetchAll());
         return "home/viewContracts";
     }
 
@@ -57,7 +57,7 @@ public class HomeController {
         List<Customer> customerList = customerService.fetchAll();
         model.addAttribute("customers", customerList);
 
-        System.out.println(customerService.fetchAll());
+        //System.out.println(customerService.fetchAll());
         return "home/viewCustomers";
     }
 

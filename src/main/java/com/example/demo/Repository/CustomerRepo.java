@@ -17,7 +17,7 @@ public class CustomerRepo {
     JdbcTemplate template;
 
     public List<Customer> fetchAll() {
-        String sql = "select * from customers, address, zipcodes where address.zipcodeid = zipcodes.zipcodeid and customers.addressid = address.addressid;";
+        String sql = "select * from customers, address, zipcodes where address.zipcodeida = zipcodes.zipcodeid and customers.addressidc = address.addressid;";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
         return template.query(sql, rowMapper);
     }

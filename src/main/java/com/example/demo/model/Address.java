@@ -9,7 +9,7 @@ public class Address {
     @Id
     private int addressID;
     private String address;
-    private int zipcodeID;
+    private int zipcodeIDa;
 
     public Address() {
 
@@ -31,11 +31,11 @@ public class Address {
         this.address = address;
     }
 
-    public int getZipcodeID() {
-        return zipcodeID;
+    public int getZipcodeIDa() {
+        return zipcodeIDa;
     }
 
-    public void setZipcodeID(int zipcodeID) {
-        this.zipcodeID = zipcodeID;
+    public void setZipcodeIDa(int zipcodeID) {
+        this.zipcodeIDa = zipcodeID;
     }
 }
