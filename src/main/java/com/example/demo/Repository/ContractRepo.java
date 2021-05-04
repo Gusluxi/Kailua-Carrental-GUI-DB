@@ -23,7 +23,7 @@ public class ContractRepo {
     }
 
     public Contract addContract(Contract contract){
-        String sql = "INSERT INTO kailuacarrental.contracts (contractDateStart, contractDateEnd, maxKM, startOdometer, customerID, plateNumber) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO contracts (contract_date_start, contract_date_end, maxkm, start_odometer, customerid, platenumber) VALUES (?, ?, ?, ?, ?, ?)";
         template.update(sql, contract.getContractDateStart(), contract.getContractDateEnd(), contract.getMaxKM(), contract.getStartOdometer(), contract.getCustomerID(), contract.getPlateNumber());
         return null;
     }
