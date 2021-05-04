@@ -11,6 +11,31 @@ public class Address {
     private String address;
     private int zipcodeID;
 
-    public Address() {}
+    public Address() {
 
+    }
+
+    public int getAddressID() {
+        return addressID;
+    }
+
+    public void setAddressID(int addressID) {
+        this.addressID = addressID;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getZipcodeID() {
+        return zipcodeID;
+    }
+
+    public void setZipcodeID(int zipcodeID) {
+        this.zipcodeID = zipcodeID;
+    }
 }

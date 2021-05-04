@@ -27,4 +27,5 @@ public class ContractRepo {
         template.update(sql, contract.getContractDateStart(), contract.getMaxKM(), contract.getStartOdometer(), contract.getCustomerID(), contract.getPlateNumber());
         return null;
     }
+
 }

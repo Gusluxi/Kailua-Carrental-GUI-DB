@@ -15,14 +15,28 @@ public class Zipcode {
     public Zipcode() {
     }
 
-    public int getZipcodeID() { return zipcodeID; }
+    public int getZipcodeID() {
+        return zipcodeID;
+    }
 
-    public void setZipcodeID(int zipcodeID) { this.zipcodeID = zipcodeID; }
+    public void setZipcodeID(int zipcodeID) {
+        this.zipcodeID = zipcodeID;
+    }
 
-    public int getZipcode() { return zipcode; }
+    public int getZipcode() {
+        return zipcode;
+    }
 
-    public void setZipcode(int zipcode) { this.zipcode = zipcode; }
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
 
-    public String getCity() { return city; }
+    public String getCity() {
+        return city;
+    }
 
-    public void setCity(String city) { this.city = city; }
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+}

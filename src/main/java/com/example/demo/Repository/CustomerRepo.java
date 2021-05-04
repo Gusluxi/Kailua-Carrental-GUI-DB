@@ -1,5 +1,6 @@
 package com.example.demo.Repository;
 
+import com.example.demo.model.Contract;
 import com.example.demo.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -19,5 +20,11 @@ public class CustomerRepo {
         String sql = "SELECT * FROM customers";
         RowMapper<Customer> rowMapper = new BeanPropertyRowMapper<>(Customer.class);
         return template.query(sql, rowMapper);
+    }
+
+    public Customer addCustomer(Customer customer) {
+        String sql = "INSERT INTO customers (name, mobile_phone, email, driver_licence, driver_since_date) VALUES (?, ?, ?, ?)";
+        template.update(sql, customer.getCustomerID(), customer.getAddressID());
+        return null;
     }
 }
