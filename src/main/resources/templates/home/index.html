@@ -21,10 +21,9 @@
 
     <div id="center">
         <h2>Rent a car!</h2>
-        <form action="/createContract" method="post">
-            <input type="date" name="contractDateStart" placeholder="Contract Start Date">
-            <input type="date" name="contractDateEnd" placeholder="Contract End Date">
-            <a href="/createContract">
+
+        <form action="/createContract" method="get">
+            <a th:href="@{'/createContract'+${car.brandAndModel}}">
                 <button class="btn-createContract" id="btn-createContract">Create Contract</button>
             </a>
         </form>

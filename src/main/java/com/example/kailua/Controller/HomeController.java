@@ -1,5 +1,5 @@
 package com.example.kailua.Controller;
-import com.example.demo.Service.*;
+
 import com.example.kailua.Model.Car;
 import com.example.kailua.Model.Contract;
 import com.example.kailua.Model.Customer;
@@ -7,9 +7,7 @@ import com.example.kailua.Service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -57,11 +55,12 @@ public class HomeController {
         return "home/viewCustomers";
     }
 
+    //@GetMapping("/createContract")
+    //public String create() { return "home/createContract"; }
+
     @GetMapping("/createContract")
-    public String create() { return "home/createContract"; }
-    @PostMapping("/createContract")
-    public String create(@ModelAttribute Contract contract){
-        contractService.addContract(contract);
+    public String createContract(@PathVariable("brandAndModel") String brandAndModel) {
+        //contractService.addContract(contract);
         return "redirect:/";
     }
 }
