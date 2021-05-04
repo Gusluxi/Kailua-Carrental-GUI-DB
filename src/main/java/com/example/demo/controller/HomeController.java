@@ -3,6 +3,8 @@ import com.example.demo.Repository.CarRepo;
 import com.example.demo.Repository.ContractRepo;
 import com.example.demo.Repository.CustomerRepo;
 import com.example.demo.Service.ContractService;
+import com.example.demo.Repository.*;
+import com.example.demo.model.Address;
 import com.example.demo.model.Car;
 import com.example.demo.model.Contract;
 import com.example.demo.model.Customer;
@@ -23,6 +25,10 @@ public class HomeController {
     ContractRepo contractRepo;
     @Autowired
     CustomerRepo customerRepo;
+    @Autowired
+    AddressRepo addressRepo;
+    @Autowired
+    ZipcodeRepo zipcodeRepo;
     ContractService contractService;
 
 
@@ -51,6 +57,7 @@ public class HomeController {
     public String viewCustomers(Model model) {
         List<Customer> customerList = customerRepo.fetchAll();
         model.addAttribute("customers", customerList);
+
         System.out.println(customerRepo.fetchAll());
         return "home/viewCustomers";
     }
