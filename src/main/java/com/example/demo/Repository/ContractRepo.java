@@ -21,4 +21,10 @@ public class ContractRepo {
         RowMapper<Contract> rowMapper = new BeanPropertyRowMapper<>(Contract.class);
         return template.query(sql, rowMapper);
     }
+
+    public Contract addContract(Contract contract){
+        String sql = "INSERT INTO kailuacarrental.contracts (contractDateStart, maxKM, startOdometer, customerID, plateNumber) VALUES (?, ?, ?, ?, ?)";
+        template.update(sql, contract.getContractDateStart(), contract.getMaxKM(), contract.getStartOdometer(), contract.getCustomerID(), contract.getPlateNumber());
+        return null;
+    }
 }

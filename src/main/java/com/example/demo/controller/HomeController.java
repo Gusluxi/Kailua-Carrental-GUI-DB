@@ -2,6 +2,7 @@ package com.example.demo.controller;
 import com.example.demo.Repository.CarRepo;
 import com.example.demo.Repository.ContractRepo;
 import com.example.demo.Repository.CustomerRepo;
+import com.example.demo.Service.ContractService;
 import com.example.demo.model.Car;
 import com.example.demo.model.Contract;
 import com.example.demo.model.Customer;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -21,6 +23,7 @@ public class HomeController {
     ContractRepo contractRepo;
     @Autowired
     CustomerRepo customerRepo;
+    ContractService contractService;
 
 
     @GetMapping("/")
@@ -50,5 +53,15 @@ public class HomeController {
         model.addAttribute("customers", customerList);
         System.out.println(customerRepo.fetchAll());
         return "home/viewCustomers";
+    }
+
+    @GetMapping("/createContract")
+    public String create(){
+        return "home/createContract";
+    }
+    @PostMapping("/createContract")
+    public String create(@ModelAttribute Contract contract){
+        contractService.addContract(contract);
+        return "redirect:/";
     }
 }
