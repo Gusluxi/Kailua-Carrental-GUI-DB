@@ -19,11 +19,6 @@ public class HomeController {
     ContractService contractService;
     @Autowired
     CustomerService customerService;
-    @Autowired
-    AddressService addressService;
-    @Autowired
-    ZipcodeService zipcodeService;
-
 
     @GetMapping("/")
     public String index(){
