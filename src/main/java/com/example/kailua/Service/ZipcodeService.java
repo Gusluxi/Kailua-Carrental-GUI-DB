@@ -1,7 +1,7 @@
-package com.example.demo.Service;
+package com.example.kailua.Service;
 
-import com.example.demo.Repository.ZipcodeRepo;
-import com.example.demo.model.Zipcode;
+import com.example.kailua.Repository.ZipcodeRepo;
+import com.example.kailua.Model.Zipcode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

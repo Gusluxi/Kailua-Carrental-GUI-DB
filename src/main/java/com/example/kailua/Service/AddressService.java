@@ -1,7 +1,7 @@
-package com.example.demo.Service;
+package com.example.kailua.Service;
 
-import com.example.demo.Repository.AddressRepo;
-import com.example.demo.model.Address;
+import com.example.kailua.Repository.AddressRepo;
+import com.example.kailua.Model.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

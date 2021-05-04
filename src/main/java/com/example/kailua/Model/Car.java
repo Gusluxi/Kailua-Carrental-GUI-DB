@@ -1,18 +1,8 @@
-package com.example.demo.model;
-
-import org.springframework.format.annotation.DateTimeFormat;
+package com.example.kailua.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Date;
 
 
 @Entity

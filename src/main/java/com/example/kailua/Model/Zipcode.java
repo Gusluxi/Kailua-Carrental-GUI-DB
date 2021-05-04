@@ -1,8 +1,7 @@
-package com.example.demo.model;
+package com.example.kailua.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.time.LocalDate;
 
 @Entity
 public class Zipcode {
