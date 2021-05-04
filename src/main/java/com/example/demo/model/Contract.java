@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import jdk.vm.ci.meta.Local;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDate;
@@ -10,6 +12,7 @@ public class Contract {
     @Id
     private int contractID;
     private LocalDate contractDateStart;
+    private LocalDate contractDateEnd;
     private int maxKM;
     private int startOdometer;
     private int customerID;
@@ -26,6 +29,14 @@ public class Contract {
 
     public void setContractDateStart(LocalDate contractDateStart) {this.contractDateStart = contractDateStart; }
 
+    public LocalDate getContractDateEnd() {
+        return contractDateEnd;
+    }
+
+    public void setContractDateEnd(LocalDate contractDateEnd) {
+        this.contractDateEnd = contractDateEnd;
+    }
+
     public int getMaxKM() {return maxKM; }
 
     public void setMaxKM(int maxKM) {this.maxKM = maxKM; }
@@ -41,5 +52,7 @@ public class Contract {
     public String getPlateNumber() {return plateNumber; }
 
     public void setPlateNumber(String plateNumber) {this.plateNumber = plateNumber; }
+
+
 
 }
