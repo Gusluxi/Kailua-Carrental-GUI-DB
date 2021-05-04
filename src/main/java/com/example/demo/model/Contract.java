@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-import jdk.vm.ci.meta.Local;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

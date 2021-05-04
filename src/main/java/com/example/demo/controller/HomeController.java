@@ -2,7 +2,7 @@ package com.example.demo.controller;
 import com.example.demo.Repository.CarRepo;
 import com.example.demo.Repository.ContractRepo;
 import com.example.demo.Repository.CustomerRepo;
-import com.example.demo.Service.ContractService;
+import com.example.demo.Service.*;
 import com.example.demo.Repository.*;
 import com.example.demo.model.Address;
 import com.example.demo.model.Car;
@@ -20,16 +20,15 @@ import java.util.List;
 @Controller
 public class HomeController {
     @Autowired
-    CarRepo carRepo;
+    CarService carService;
     @Autowired
-    ContractRepo contractRepo;
-    @Autowired
-    CustomerRepo customerRepo;
-    @Autowired
-    AddressRepo addressRepo;
-    @Autowired
-    ZipcodeRepo zipcodeRepo;
     ContractService contractService;
+    @Autowired
+    CustomerService customerService;
+    @Autowired
+    AddressService addressService;
+    @Autowired
+    ZipcodeService zipcodeService;
 
 
     @GetMapping("/")
@@ -39,26 +38,26 @@ public class HomeController {
 
     @GetMapping ("/viewCars")
     public String viewCars(Model model) {
-        List<Car> carList = carRepo.fetchAll();
+        List<Car> carList = carService.fetchAll();
         model.addAttribute("cars", carList);
-        System.out.println(carRepo.fetchAll());
+        System.out.println(carService.fetchAll());
         return "home/viewCars";
     }
 
     @GetMapping ("/viewContracts")
     public String viewContracts(Model model) {
-        List<Contract> contractList = contractRepo.fetchAll();
+        List<Contract> contractList = contractService.fetchAll();
         model.addAttribute("contracts", contractList);
-        System.out.println(contractRepo.fetchAll());
+        System.out.println(contractService.fetchAll());
         return "home/viewContracts";
     }
 
     @GetMapping ("/viewCustomers")
     public String viewCustomers(Model model) {
-        List<Customer> customerList = customerRepo.fetchAll();
+        List<Customer> customerList = customerService.fetchAll();
         model.addAttribute("customers", customerList);
 
-        System.out.println(customerRepo.fetchAll());
+        System.out.println(customerService.fetchAll());
         return "home/viewCustomers";
     }
 
