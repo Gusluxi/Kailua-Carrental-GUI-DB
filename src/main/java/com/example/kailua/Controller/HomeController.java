@@ -10,7 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class HomeController {
@@ -59,6 +61,7 @@ public class HomeController {
         //contractService.addContract(contract);
         return "redirect:/";
     }
+
     @PostMapping("/carShow")
     public String showCars(@ModelAttribute SearchC searchC, Model model) {
         model.addAttribute("searchC", searchC);
@@ -71,4 +74,11 @@ public class HomeController {
 
         return "home/selectCarPage";
     }
+
+    @GetMapping("/createCustomer/{platenumber}")
+    public String createCustomer(@PathVariable("platenumber") String platenumber, Model model) {
+        model.addAttribute("contract", contractService.findContract(platenumber));
+        return "home/createCustomer";
+    }
+
 }
