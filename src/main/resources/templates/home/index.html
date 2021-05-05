@@ -5,31 +5,38 @@
     <title>Kailua Car rental</title>
     <link rel="stylesheet" type="text/css" href="MyIndexCSS.css">
 </head>
-<body>
-
-<div id="box">
-    <a href="/viewCars">
-        <button class="btn-viewCars" id="btn-viewCars">View All Cars</button>
-    </a>
-    <a href="/viewCustomers">
-        <button class="btn-viewCustomers" id="btn-viewCustomers">View All Customers</button>
-    </a>
-    <a href="/viewContracts">
-        <button class="btn-viewContracts" id="btn-viewContracts">View All Contracts</button>
-    </a>
-
-
-    <div id="center">
-        <h2>Rent a car!</h2>
-
-        <form action="/createContract" method="get">
-            <a th:href="@{'/createContract'+${car.brandAndModel}}">
-                <button class="btn-createContract" id="btn-createContract">Create Contract</button>
-            </a>
-        </form>
-    </div>
+<body style="background-image:  url('https://i.imgur.com/H5A6kfe.gif'); background-position: center">
+<div id="header">
+    <br/>
 
 </div>
+<div id="box">
+    <h1 style="text-align: center; color:white; font-family:verdana;">Kailua Car Rental</h1>
+    <form action="/action_page.php">
+    <label style="position:absolute; left:28%; top:42%; color:white; font-size:140%; "
+           for="selection-box">Choose a car type</label>
+    <select name="selection-box" id="selection-box">
+        <option value="family">Family</option>
+        <option value="luxery">Luxery</option>
+        <option value="sport">Sport</option>
+    </select>
+    <br><br>
+    <input class="btn-submit" id="btn-submit" type="submit" value="Submit">
+</form>
+
+    <a href="/viewCars">
+        <button class="btn1" id="btn1">View All Cars</button>
+    </a>
+    <a href="/viewCustomers">
+        <button class="btn2" id="btn2">View All Customers</button>
+    </a>
+    <a href="/viewContracts">
+        <button class="btn3" id="btn3">View All Contracts</button>
+    </a>
+
+
+</div>
+
 
 </body>
 </html>
