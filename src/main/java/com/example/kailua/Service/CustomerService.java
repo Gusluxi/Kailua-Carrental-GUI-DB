@@ -16,6 +16,14 @@ public class CustomerService {
         return customerRepo.fetchAll();
     }
 
+    public Customer addZipcode(Customer customer){
+        return customerRepo.addCustomer(customer);
+    }
+
+    public Customer addAddress(Customer customer){
+        return customerRepo.addCustomer(customer);
+    }
+
     public Customer addCustomer(Customer customer){
         return customerRepo.addCustomer(customer);
     }
