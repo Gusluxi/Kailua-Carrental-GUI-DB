@@ -1,6 +1,7 @@
 package com.example.kailua.Repository;
 
 import com.example.kailua.Model.Contract;
+import com.example.kailua.Model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -26,6 +27,13 @@ public class ContractRepo {
         String sql = "INSERT INTO contracts (contract_date_start, contract_date_end, maxkm, start_odometer, customerid, platenumber) VALUES (?, ?, ?, ?, ?, ?)";
         template.update(sql, contract.getContractDateStart(), contract.getContractDateEnd(), contract.getMaxKM(), contract.getStartOdometer(), contract.getCustomerID(), contract.getPlateNumber());
         return null;
+    }
+
+    public Contract findContract(String platenumber){
+        String sql = "SELECT * FROM contracts WHERE platenumber = ?";
+        RowMapper<Contract> rowMapper = new BeanPropertyRowMapper<>(Contract.class);
+        Contract c = template.queryForObject(sql, rowMapper, platenumber);
+        return c;
     }
 
 }

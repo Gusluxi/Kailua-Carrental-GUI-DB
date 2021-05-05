@@ -19,4 +19,6 @@ public class ContractService {
     public Contract addContract(Contract contract){
         return contractRepo.addContract(contract);
     }
+
+    public Contract findContract(String platenumber) { return contractRepo.findContract(platenumber); }
 }
