@@ -22,8 +22,8 @@ public class CustomerRepo {
     }
 
     public Customer addCustomer(Customer customer) {
-        String sql = "INSERT INTO customers (name, mobile_phone, email, driver_licence, driver_since_date) VALUES (?, ?, ?, ?)";
-        template.update(sql, customer.getCustomerID(), customer.getAddressID());
+        String sql = "INSERT INTO customers (name, mobile_phone, email, driver_licence, driver_since_date, addressidc) VALUES (?, ?, ?, ?, ?)";
+        template.update(sql, customer.getName(), customer.getMobilePhone(), customer.getDriverLicence(), customer.getDriverSinceDate(), customer.getAddressIDc());
         return null;
     }
 }
