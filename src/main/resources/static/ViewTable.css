@@ -1,5 +1,17 @@
+#center-box {
+    position:relative;
+    background-color: deepskyblue;
+    background-image: url('https://i.imgur.com/YNnw1us.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    width: 70%;
+    border: 1px solid black;
+    padding: 4px;
+    margin: auto;
+}
 table{
-
     border-collapse: collapse;
     width: 60%;
     margin-left: auto;
