@@ -2,10 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>CreateCustomer</title>
+    <style>
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
-<body>
+<body style="background-image:  url('https://i.imgur.com/H5A6kfe.gif'); background-position: center">
+<h1>Add new customer</h1>
 
-<h1>Create customer</h1>
+<form action="/createContract" method="post">
+    <label>Enter Customer name</label>
+    <input type="text" name="name" placeholder="Customer name">
+    <label>Enter Customer Mobile Phone</label>
+    <input type="text" name="mobilePhone" placeholder="Mobile Phone">
+    <label>Enter Customer Email</label>
+    <input type="text" name="email" placeholder="email">
+    <label>Enter customer driver license</label>
+    <input type="text" name="driverLicence" placeholder="Drivers License">
+    <label>Enter customer driver since date</label>
+    <input type="text" name="driverSinceDate" placeholder="Driver Since Date">
+    <input type="submit" value="Create new customer" style="color: #4CAF50">
+
+</form>
 </body>
 </html>
