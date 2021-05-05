@@ -1,0 +1,40 @@
+#center-box {
+    position:relative;
+    background-color: deepskyblue;
+    background-image: url('https://i.imgur.com/YNnw1us.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    width: 70%;
+    border: 1px solid black;
+    padding: 4px;
+    margin: auto;
+}
+
+#car-list-area {
+    height: 800px;
+    width: 50%;
+    position:absolute;
+    left:50%; top:20%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+#car-btn {
+    background-color: midnightblue;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    position:relative; left:47%;
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+}
+

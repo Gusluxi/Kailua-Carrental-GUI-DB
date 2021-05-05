@@ -3,6 +3,7 @@ package com.example.kailua.Controller;
 import com.example.kailua.Model.Car;
 import com.example.kailua.Model.Contract;
 import com.example.kailua.Model.Customer;
+import com.example.kailua.Model.SearchC;
 import com.example.kailua.Service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -57,5 +58,17 @@ public class HomeController {
     public String createContract(@PathVariable("brandAndModel") String brandAndModel) {
         //contractService.addContract(contract);
         return "redirect:/";
+    }
+    @PostMapping("/carShow")
+    public String showCars(@ModelAttribute SearchC searchC, Model model) {
+        model.addAttribute("searchC", searchC);
+        List<Car> cars = carService.fetchAll();
+        model.addAttribute("cars",cars);
+
+        List<Car> carSearch = carService.sortCarTier(searchC.getCar_tier());
+        model.addAttribute("carSearch", carSearch);
+        model.addAttribute("carService", carService);
+
+        return "home/selectCarPage";
     }
 }

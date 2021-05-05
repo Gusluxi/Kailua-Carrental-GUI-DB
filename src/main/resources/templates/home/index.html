@@ -11,17 +11,19 @@
 
 </div>
 <div id="box">
+
     <h1 style="text-align: center; color:white; font-family:verdana;">Kailua Car Rental</h1>
-    <form action="/action_page.php">
+
+    <form id="form" action="/carShow" method="post">
     <label style="position:absolute; left:28%; top:42%; color:white; font-size:140%; "
            for="selection-box">Choose a car type</label>
-    <select name="selection-box" id="selection-box">
+    <select name="car_tier" id="selection-box">
         <option value="family">Family</option>
-        <option value="luxery">Luxery</option>
+        <option value="luxury">Luxury</option>
         <option value="sport">Sport</option>
     </select>
     <br><br>
-    <input class="btn-submit" id="btn-submit" type="submit" value="Submit">
+    <input class="btn-submit" id="btn-submit" type="submit" value="Show Cars">
 </form>
 
     <a href="/viewCars">

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Select a Car</title>
+    <link rel="stylesheet" type="text/css" href="selectCarPageCSS.css">
+</head>
+<body style="background-image:  url('https://i.imgur.com/H5A6kfe.gif'); background-position: center">
+    <div id="center-box">
+        <h1 style="text-align: center; color:white; font-family:verdana;">Kailua Car Rental</h1>
+        <div id="car-list-area">
+            <h3 style="color:white; text-align: center"> Choose a Car: </h3>
+            <ul th:if="${carSearch.empty}">
+                <li colspan="2"> Error </li>
+            </ul>
+            <div id="car-buttons">
+                <ul th:each="car : ${carSearch}">
+                    <button class="car-btn" id="car-btn" th:text="${car.BrandAndModel}"></button>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
