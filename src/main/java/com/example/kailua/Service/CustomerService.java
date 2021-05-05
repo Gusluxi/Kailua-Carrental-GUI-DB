@@ -1,5 +1,6 @@
 package com.example.kailua.Service;
 
+import com.example.kailua.Model.Contract;
 import com.example.kailua.Repository.CustomerRepo;
 import com.example.kailua.Model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,5 +14,9 @@ public class CustomerService {
 
     public List<Customer> fetchAll(){
         return customerRepo.fetchAll();
+    }
+
+    public Customer addCustomer(Customer customer){
+        return customerRepo.addCustomer(customer);
     }
 }

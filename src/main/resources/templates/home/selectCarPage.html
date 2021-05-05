@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>Select a Car</title>
     <link rel="stylesheet" type="text/css" href="selectCarPageCSS.css">
+    <script>function goBack() {
+        window.history.back()
+    }</script>
 </head>
 <body style="background-image:  url('https://i.imgur.com/H5A6kfe.gif'); background-position: center">
     <div id="center-box">
+        <button class="back-btn" id="back-btn" onclick="goBack()">Go Back</button>
         <h1 style="text-align: center; color:white; font-family:verdana;">Kailua Car Rental</h1>
         <div id="car-list-area">
             <h3 style="color:white; text-align: center"> Choose a Car: </h3>
