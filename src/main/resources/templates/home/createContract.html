@@ -11,8 +11,12 @@
             box-sizing: border-box;
         }
     </style>
+    <script>function goBack() {
+        window.history.back()
+    }</script>
 </head>
 <body style="background-image:  url('https://i.imgur.com/H5A6kfe.gif'); background-position: center">
+<button class="back-btn" id="back-btn" onclick="goBack()">Go Back</button>
 <h1>Add new contract</h1>
 
 <form action="/createContract" method="post">
