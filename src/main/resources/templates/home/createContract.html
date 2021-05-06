@@ -25,10 +25,8 @@
     <input type="text" name="maxKM" placeholder="MaxKM">
     <label>Enter Start Odometer</label>
     <input type="text" name="startOdometer" placeholder="Start Odometer">
-    <label>Enter CustomerID</label>
-    <input type="text" name="customerID" placeholder="CustomerID">
-    <label>Enter Plate Number</label>
-    <input type="text" name="plateNumber" placeholder="Plate Number">
+    <input type="hidden" name="customerID" th:value="${customerid}">
+    <input type="hidden" name="plateNumber" th:value="${platenumber}">
     <input type="submit" value="Create new contract" style="color: #4CAF50">
 
 </form>

@@ -56,12 +56,13 @@ public class HomeController {
         return "home/viewCustomers";
     }
 
-    //@GetMapping("/createContract")
-    //public String create() { return "home/createContract"; }
-
     @GetMapping("/createContract")
-    public String createContract(@PathVariable("brandAndModel") String brandAndModel) {
-        //contractService.addContract(contract);
+    public String createContract(){
+        return "home/createContract";
+    }
+    @PostMapping("/createContract")
+    public String createContract(@ModelAttribute Contract contract){
+        contractService.addContract(contract);
         return "redirect:/";
     }
 
