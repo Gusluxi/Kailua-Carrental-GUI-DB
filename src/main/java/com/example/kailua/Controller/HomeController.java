@@ -22,6 +22,7 @@ public class HomeController {
     ContractService contractService;
     @Autowired
     CustomerService customerService;
+    String globalPlateNumber;
 
     @GetMapping("/")
     public String index(){
@@ -85,16 +86,18 @@ public class HomeController {
     */
     @GetMapping("/createCustomer/{platenumber}")
     public String createCustomer(@PathVariable("platenumber") String platenumber, Model model){
-        model.addAttribute("platenumber", platenumber);
+        globalPlateNumber = platenumber;
         return "home/createCustomer";
     }
 
     @PostMapping("/createCustomer")
     public String createCustomer(@ModelAttribute Customer customer, Model model){
+        System.out.println(globalPlateNumber);
         customerService.addZipcode(customer);
         customerService.addAddress(customer);
         customerService.addCustomer(customer);
         model.addAttribute("customerid",customerService.getCustomerID());
+        model.addAttribute("platenumber",globalPlateNumber);
         return "home/createContract";
     }
 
