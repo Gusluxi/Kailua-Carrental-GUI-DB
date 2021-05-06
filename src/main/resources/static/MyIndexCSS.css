@@ -1,13 +1,13 @@
 #box {
     position:relative;
-    background-color: deepskyblue;
-    background-image: url('https://i.imgur.com/YNnw1us.gif');
+    background-color: #c3d5d5;
+    /*background-image: url('https://img.wallpapersafari.com/desktop/1600/900/81/93/3DNUtx.jpg');*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 1000px;
     width: 70%;
-    border: 1px solid black;
+    border: 0px solid black;
     padding: 4px;
     margin: auto;
 }
