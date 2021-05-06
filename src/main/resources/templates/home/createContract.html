@@ -3,19 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Contract</title>
+    <link rel="stylesheet" type="text/css" href="ViewCreateContractCSS.css">
     <style>
+        body {
+            background-color: #3d5c5c;
+        }
+        #box-create {
+            position:relative;
+            background-color: #85adad;
+            min-height: 800px;
+            width: 70%;
+            border: 2px solid black;
+            padding: 10px;
+            margin: auto;
+        }
         input[type=text] {
             width: 100%;
-            padding: 12px 20px;
+            height: 50px;
+            padding: 20px 20px;
             margin: 8px 0;
             box-sizing: border-box;
         }
+        label {
+            text-align: left;
+            text-decoration: underline;
+        }
     </style>
 </head>
-<body style="background-image:  url('https://cdn.discordapp.com/attachments/803275974720094238/834722109007593482/unknown.png'); background-position: center">
+<body style="background-color: #c2d6d6">
+
+<div id="box-create">
 <h1>Add new contract</h1>
-<span th:text="${platenumber}"></span>
-<span th:text="${customerid}"></span>
 <form action="/createContract" method="post">
     <label>Enter Contract date start</label>
     <input type="date" name="contractDateStart" placeholder="Contract Date Start">
@@ -28,7 +46,7 @@
     <input type="hidden" name="customerID" th:value="${customerid}">
     <input type="hidden" name="plateNumber" th:value="${platenumber}">
     <input type="submit" value="Create new contract" style="color: #4CAF50">
-
 </form>
+</div>
 </body>
 </html>
