@@ -84,9 +84,7 @@ public class HomeController {
     }
     */
     @GetMapping("/createCustomer")
-    public String create(){
-        return "home/createCustomer";
-    }
+    public String create(){ return "home/createCustomer"; }
     @PostMapping("/createCustomer")
     public String createCustomer(@ModelAttribute Customer customer, Model model){
         customerService.addZipcode(customer);
