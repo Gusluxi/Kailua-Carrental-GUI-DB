@@ -17,14 +17,20 @@ public class CustomerService {
     }
 
     public Customer addZipcode(Customer customer){
-        return customerRepo.addCustomer(customer);
+        return customerRepo.addZipcode(customer);
     }
 
     public Customer addAddress(Customer customer){
-        return customerRepo.addCustomer(customer);
+        return customerRepo.addAddress(customer);
     }
 
     public Customer addCustomer(Customer customer){
         return customerRepo.addCustomer(customer);
     }
+
+    public int getCustomerID(){
+        return customerRepo.getCustomerID();
+    }
+
+
 }

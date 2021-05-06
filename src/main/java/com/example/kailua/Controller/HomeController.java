@@ -38,10 +38,12 @@ public class HomeController {
 
     @GetMapping ("/viewContracts")
     public String viewContracts(Model model) {
+        //System.out.println(customerService.getCustomerID());
         List<Contract> contractList = contractService.fetchAll();
         model.addAttribute("contracts", contractList);
         //System.out.println(contractService.fetchAll());
         return "home/viewContracts";
+
     }
 
     @GetMapping ("/viewCustomers")
@@ -74,12 +76,25 @@ public class HomeController {
 
         return "home/selectCarPage";
     }
-
+    /*
     @GetMapping("/createCustomer/{platenumber}")
-    public String createCustomer(@PathVariable("platenumber") String platenumber, Model model) {
+    public String nogetMedPlateNumber(@PathVariable("platenumber") String platenumber, Model model) {
         model.addAttribute("contract", contractService.findContract(platenumber));
-        //customerService.addCustomer(customer);
         return "home/createCustomer";
     }
+    */
+    @GetMapping("/createCustomer")
+    public String create(){
+        return "home/createCustomer";
+    }
+    @PostMapping("/createCustomer")
+    public String createCustomer(@ModelAttribute Customer customer, Model model){
+        customerService.addZipcode(customer);
+        customerService.addAddress(customer);
+        customerService.addCustomer(customer);
+        model.addAttribute("customer",customerService.getCustomerID());
+        return "home/createCustomer";
+    }
+
 
 }
