@@ -21,4 +21,5 @@ public class CarRepo {
         RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
         return template.query(sql, rowMapper);
     }
+
 }
