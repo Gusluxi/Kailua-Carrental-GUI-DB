@@ -4,17 +4,18 @@
 }
 #center-box {
     position:relative;
-    background-color: deepskyblue;
-    background-image: url('https://i.imgur.com/YNnw1us.gif');
+    background-color: #0099cc;
+    /*background-image: url('https://img.wallpapersafari.com/desktop/1600/900/81/93/3DNUtx.jpg');*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 1000px;
+    height: 700px;
     width: 70%;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 4px;
     margin: auto;
 }
+
 
 #car-list-area {
     height: 800px;
@@ -35,7 +36,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    width: 300px;
+    width: 50%;
     height: 50px;
     position:relative; left:47%;
     -ms-transform: translate(-50%);
