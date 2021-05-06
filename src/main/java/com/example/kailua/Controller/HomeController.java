@@ -78,6 +78,7 @@ public class HomeController {
     @GetMapping("/createCustomer/{platenumber}")
     public String createCustomer(@PathVariable("platenumber") String platenumber, Model model) {
         model.addAttribute("contract", contractService.findContract(platenumber));
+        //customerService.addCustomer(customer);
         return "home/createCustomer";
     }
 

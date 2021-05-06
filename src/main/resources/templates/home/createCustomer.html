@@ -2,18 +2,38 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Create Contract</title>
+    <style>
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
-<body>
-<h1>Contract</h1>
-<span th:text="${contract.contractID}" />
-<span th:text="${contract.contractDateStart}" />
-<span th:text="${contract.contractDateEnd}" />
-<span th:text="${contract.maxKM}" />
-<span th:text="${contract.startOdometer}" />
-<span th:text="${contract.customerID}" />
-<span th:text="${contract.plateNumber}" />
+<body style="background-image:  url('https://i.imgur.com/H5A6kfe.gif'); background-position: center">
+<h1>Add new contract</h1>
 
+<form action="/createCustomerTest" method="post">
+    <label>Enter zipcode</label>
+    <input type="text" name="zipcode" placeholder="Customer Zipcode">
+    <label>Enter City</label>
+    <input type="text" name="city" placeholder="City">
+    <label>Enter address</label>
+    <input type="text" name="address" placeholder="Address">
+    <label>Enter Name</label>
+    <input type="text" name="name" placeholder="Customer name">
+    <label>Enter mobilephone</label>
+    <input type="text" name="mobilePhone" placeholder="Customer mobile phone">
+    <label>Enter email</label>
+    <input type="text" name="email" placeholder="customer email">
+    <label>Enter drivers license</label>
+    <input type="text" name="driverLicence" placeholder="Drivers license">
+    <label>Enter driver since date</label>
+    <input type="date" name="driverSinceDate" placeholder="Driver since date">
+    <input type="submit" value="Create new customer" style="color: #4CAF50">
 
+</form>
 </body>
 </html>
