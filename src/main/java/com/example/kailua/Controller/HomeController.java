@@ -83,15 +83,19 @@ public class HomeController {
         return "home/createCustomer";
     }
     */
-    @GetMapping("/createCustomer")
-    public String create(){ return "home/createCustomer"; }
+    @GetMapping("/createCustomer/{platenumber}")
+    public String createCustomer(@PathVariable("platenumber") String platenumber, Model model){
+        model.addAttribute("platenumber", platenumber);
+        return "home/createCustomer";
+    }
+
     @PostMapping("/createCustomer")
     public String createCustomer(@ModelAttribute Customer customer, Model model){
         customerService.addZipcode(customer);
         customerService.addAddress(customer);
         customerService.addCustomer(customer);
-        model.addAttribute("customer",customerService.getCustomerID());
-        return "home/createCustomer";
+        model.addAttribute("customerid",customerService.getCustomerID());
+        return "home/createContract";
     }
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Create Contract</title>
@@ -14,7 +14,8 @@
 </head>
 <body style="background-image:  url('https://i.imgur.com/plc14rL.png'); background-position: center">
 <h1>Add new contract</h1>
-
+<span th:text="${platenumber}"></span>
+<span th:text="${customerid}"></span>
 <form action="/createContract" method="post">
     <label>Enter Contract date start</label>
     <input type="date" name="contractDateStart" placeholder="Contract Date Start">

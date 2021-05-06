@@ -19,7 +19,7 @@
             </ul>
             <div id="car-buttons">
                 <ul th:each="car : ${carSearch}">
-                    <a href="/createCustomer">
+                    <a th:href="@{'/createCustomer/'+${car.platenumber}}">
                     <button class="car-btn" id="car-btn" th:text="${car.BrandAndModel}"></button>
                     </a>
                 </ul>
