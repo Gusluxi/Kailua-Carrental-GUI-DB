@@ -1,8 +1,3 @@
-#header {
-    height: 120px;
-    width: 100%;
-}
-
 #box {
     position:relative;
     background-color: deepskyblue;
@@ -10,7 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    min-height: 1000px;
     width: 70%;
     border: 1px solid black;
     padding: 4px;
@@ -18,33 +13,33 @@
 }
 
 #selection-box {
-    background-color: mediumblue;
+    background-color: midnightblue;
     border: 2px solid white;
     color: white;
-    padding: 7px 15px;
+    padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    position:absolute; left:46%; top:40%;
+    position:absolute; left:46%; top:25%;
     -ms-transform: translate(-50%);
     transform: translate(-50%);
 }
 
 #btn-submit {
-    background-color: mediumblue;
+    background-color: midnightblue;
     border: 2px solid white;
     color: white;
-    padding: 7px 15px;
+    padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    position:absolute; left:55%; top:40%;
+    position:absolute; left:55%; top:25%;
     -ms-transform: translate(-50%);
     transform: translate(-50%);
 }
@@ -60,7 +55,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    position:absolute; left:7%; top:85%;
+    position:absolute; left:7%; top:50%;
 }
 
 #btn2 {
@@ -74,7 +69,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    position:absolute; left:50%; top:85%;
+    position:absolute; left:50%; top:50%;
     -ms-transform: translate(-50%);
     transform: translate(-50%);
 }
@@ -90,22 +85,10 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    position:absolute; right:7%; top:85%;
+    position:absolute; right:7%; top:50%;
 }
-#btn4 {
-    background-color: midnightblue;
-    border: 2px solid white;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position:absolute; left:7%; top:40%;
-}
-table{
+
+#table{
     border-collapse: collapse;
     width: 40%;
 }

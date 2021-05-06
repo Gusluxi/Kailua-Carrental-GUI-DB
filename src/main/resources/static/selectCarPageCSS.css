@@ -1,3 +1,7 @@
+#header {
+    height: 120px;
+    width: 100%;
+}
 #center-box {
     position:relative;
     background-color: deepskyblue;
@@ -5,7 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 1000px;
+    min-height: 1000px;
     width: 70%;
     border: 1px solid black;
     padding: 4px;
