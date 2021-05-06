@@ -36,8 +36,15 @@ public class CustomerRepo {
 
     public Customer addCustomer(Customer customer) {
         String sql = "INSERT INTO customers (name, mobile_phone, email, driver_licence, driver_since_date, addressidc) VALUES (?, ?, ?, ?, ?, (select addressid from address where addressid = (select max(addressid) from address)))";
-        template.update(sql, customer.getName(), customer.getMobilePhone(),customer.getEmail(), customer.getDriverLicence(), customer.getDriverSinceDate(), customer.getAddressIDc());
+        template.update(sql, customer.getName(), customer.getMobilePhone(),customer.getEmail(), customer.getDriverLicence(), customer.getDriverSinceDate());
         return null;
     }
 
+    public int getCustomerID() {
+        String sql = "SELECT customerid FROM customers WHERE customerid = (select max(customerid) from customers)";
+
+        int customerID = template.queryForObject(sql, new Object[]{}, Integer.class);
+
+        return customerID;
+    }
 }
