@@ -28,6 +28,22 @@
             text-align: left;
             text-decoration: underline;
         }
+        #btn-submit {
+            background-color: #333333;
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 17%;
+            height: 50px;
+            overflow: hidden;
+            position:relative;
+        }
     </style>
 </head>
 
@@ -53,7 +69,7 @@
     <input type="text" name="driverLicence" placeholder="Drivers license">
     <label>Enter driver since date</label>
     <input type="date" name="driverSinceDate" placeholder="Driver since date">
-    <input type="submit" value="Create new customer">
+    <input class="btn-submit" id="btn-submit" type="submit" value="Create new customer">
     </form>
 </div>
 

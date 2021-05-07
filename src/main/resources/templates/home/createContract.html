@@ -29,6 +29,22 @@
             text-align: left;
             text-decoration: underline;
         }
+        #btn-submit {
+            background-color: #333333;
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 17%;
+            height: 50px;
+            overflow: hidden;
+            position:relative;
+        }
     </style>
 </head>
 <body style="background-color: #c2d6d6">
@@ -48,7 +64,7 @@
     <input type="text" name="startOdometer" placeholder="Start Odometer">
     <input type="hidden" name="customerID" th:value="${customerid}">
     <input type="hidden" name="plateNumber" th:value="${platenumber}">
-    <input type="submit" value="Create new contract">
+    <input class="btn-submit" id="btn-submit" type="submit" value="Create new contract">
 </form>
 </div>
 </body>
