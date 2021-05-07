@@ -1,13 +1,13 @@
 #box {
     position:relative;
-    background-color: #c3d5d5;
+    background-color: #4da6ff;
     /*background-image: url('https://img.wallpapersafari.com/desktop/1600/900/81/93/3DNUtx.jpg');*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 1000px;
+    min-height: 600px;
     width: 70%;
-    border: 0px solid black;
+    border: 2px solid black;
     padding: 4px;
     margin: auto;
 }
