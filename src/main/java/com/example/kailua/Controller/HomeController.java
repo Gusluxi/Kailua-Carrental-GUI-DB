@@ -35,7 +35,6 @@ public class HomeController {
         model.addAttribute("cars", carList);
         return "home/viewCars";
     }
-
     @GetMapping ("/viewContracts")
     public String viewContracts(Model model) {
         List<Contract> contractList = contractService.fetchAll();
@@ -43,31 +42,11 @@ public class HomeController {
         return "home/viewContracts";
 
     }
-
     @GetMapping ("/viewCustomers")
     public String viewCustomers(Model model) {
         List<Customer> customerList = customerService.fetchAll();
         model.addAttribute("customers", customerList);
         return "home/viewCustomers";
-    }
-
-    @GetMapping("/createContract")
-    public String createContract(){
-        return "home/createContract";
-    }
-    @PostMapping("/createContract")
-    public String createContract(@ModelAttribute Contract contract){
-        contractService.addContract(contract);
-        return "redirect:/";
-    }
-    @GetMapping("/delete/{contractID}")
-    public String delete(@PathVariable("contractID") int contractID){
-        boolean deleted = contractService.deleteContract(contractID);
-        if (deleted){
-            return "redirect:/";
-        }else{
-            return "redirect:/";
-        }
     }
 
     @PostMapping("/carShow")
@@ -99,6 +78,26 @@ public class HomeController {
         model.addAttribute("platenumber",globalPlateNumber);
         return "home/createContract";
     }
+
+    @GetMapping("/createContract")
+    public String createContract() { return "home/createContract"; }
+    @PostMapping("/createContract")
+    public String createContract(@ModelAttribute Contract contract){
+        contractService.addContract(contract);
+        return "redirect:/";
+    }
+
+    @GetMapping("/delete/{contractID}")
+    public String delete(@PathVariable("contractID") int contractID){
+        boolean deleted = contractService.deleteContract(contractID);
+        if (deleted){
+            return "redirect:/";
+        }else{
+            return "redirect:/";
+        }
+    }
+
+
 
 
 }
