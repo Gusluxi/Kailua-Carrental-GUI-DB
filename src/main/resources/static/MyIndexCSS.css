@@ -13,7 +13,7 @@
 }
 
 #selection-box {
-    background-color: midnightblue;
+    background-color: #333333;
     border: 2px solid white;
     color: white;
     padding: 15px 30px;
@@ -30,7 +30,7 @@
 }
 
 #btn-submit {
-    background-color: midnightblue;
+    background-color: #333333;
     border: 2px solid white;
     color: white;
     padding: 15px 30px;
@@ -47,7 +47,7 @@
 }
 
 #btn {
-    background-color: midnightblue;
+    background-color: #333333;
     border: 2px solid white;
     color: white;
     padding: 15px 30px;

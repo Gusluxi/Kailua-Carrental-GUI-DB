@@ -1,12 +1,12 @@
 #center-box {
     position: relative;
-    background-color: #96b6b6;
+    background-color: #4da6ff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 1000px;
-    width: 70%;
-    border: 1px solid black;
+    width: 75%;
+    border: 2px solid black;
     padding: 4px;
     margin: auto;
 }
@@ -17,8 +17,10 @@ table{
     margin-right: auto;
 }
 th{
-    background-color: #c3d5d5;
-    color: black;
+    border: 2px solid white;
+    background-color: #0047b3;
+    color: white;
+
 }
 td, th{
     border: 1px solid black;
@@ -26,15 +28,15 @@ td, th{
     padding: 4px;
 }
 tr:nth-child(even){
-    background-color: #c3d5d5;
+    background-color: #666666;
     color:white;
 }
 tr:nth-child(odd){
-    background-color: #5e8787;
-    color:white;
+    background-color: #cccccc;
+    color:black;
 }
 #back-btn {
-    background-color: #96b6b6;
+    background-color: #333333;
     border: 2px solid black;
     color: white;
     padding: 15px 30px;
