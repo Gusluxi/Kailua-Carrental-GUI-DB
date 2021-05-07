@@ -33,16 +33,13 @@ public class HomeController {
     public String viewCars(Model model) {
         List<Car> carList = carService.fetchAll();
         model.addAttribute("cars", carList);
-        //System.out.println(carService.fetchAll());
         return "home/viewCars";
     }
 
     @GetMapping ("/viewContracts")
     public String viewContracts(Model model) {
-        //System.out.println(customerService.getCustomerID());
         List<Contract> contractList = contractService.fetchAll();
         model.addAttribute("contracts", contractList);
-        //System.out.println(contractService.fetchAll());
         return "home/viewContracts";
 
     }
@@ -51,8 +48,6 @@ public class HomeController {
     public String viewCustomers(Model model) {
         List<Customer> customerList = customerService.fetchAll();
         model.addAttribute("customers", customerList);
-
-        //System.out.println(customerService.fetchAll());
         return "home/viewCustomers";
     }
 
@@ -64,6 +59,15 @@ public class HomeController {
     public String createContract(@ModelAttribute Contract contract){
         contractService.addContract(contract);
         return "redirect:/";
+    }
+    @GetMapping("/delete/{contractID}")
+    public String delete(@PathVariable("contractID") int contractID){
+        boolean deleted = contractService.deleteContract(contractID);
+        if (deleted){
+            return "redirect:/";
+        }else{
+            return "redirect:/";
+        }
     }
 
     @PostMapping("/carShow")
@@ -78,13 +82,7 @@ public class HomeController {
 
         return "home/selectCarPage";
     }
-    /*
-    @GetMapping("/createCustomer/{platenumber}")
-    public String nogetMedPlateNumber(@PathVariable("platenumber") String platenumber, Model model) {
-        model.addAttribute("contract", contractService.findContract(platenumber));
-        return "home/createCustomer";
-    }
-    */
+
     @GetMapping("/createCustomer/{platenumber}")
     public String createCustomer(@PathVariable("platenumber") String platenumber, Model model){
         globalPlateNumber = platenumber;

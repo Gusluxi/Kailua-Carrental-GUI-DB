@@ -52,3 +52,6 @@ tr:nth-child(odd){
     top: 20px;
     display: inline-block;
 }
+#btn-delete{
+    background-color: #4da6ff;
+}

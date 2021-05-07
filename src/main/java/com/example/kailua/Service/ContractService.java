@@ -21,4 +21,6 @@ public class ContractService {
     }
 
     public Contract findContract(String platenumber) { return contractRepo.findContract(platenumber); }
+
+    public Boolean deleteContract(int contractID) { return contractRepo.deleteContract(contractID); }
 }

@@ -21,6 +21,7 @@
         <th>Start Odometer</th>
         <th>Customer ID</th>
         <th>Plate Number</th>
+        <th>Delete Contract</th>
     </tr>
     </thead>
     <tbody>
@@ -31,6 +32,11 @@
         <td th:text="${contracts.startOdometer}" />
         <td th:text="${contracts.customerID}" />
         <td th:text="${contracts.plateNumber}" />
+        <td>
+        <a th:href="@{'/delete/'+${contracts.contractID}}">
+            <button class="btn-delete" id="btn-delete">Delete this contract</button>
+        </a>
+        </td>
     </tr>
     </tbody>
 </table>
