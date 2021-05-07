@@ -9,9 +9,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
-    width: 70%;
-    border: 2px solid white;
+    height: 600px;
+    width: 75%;
+    border: 3px solid black;
     padding: 4px;
     margin: auto;
 }
@@ -26,7 +26,7 @@
     transform: translate(-50%);
 }
 #car-btn {
-    background-color: #333333;
+    background-color: #0047b3;
     border: 2px solid white;
     color: white;
     padding: 15px 30px;
@@ -43,7 +43,7 @@
     transform: translate(-50%);
 }
 #back-btn {
-    background-color: #333333;
+    background-color: #0047b3;
     border: 2px solid white;
     color: white;
     padding: 15px 30px;
