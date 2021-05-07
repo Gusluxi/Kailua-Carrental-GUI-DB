@@ -37,16 +37,18 @@
 <h1>Add new contract</h1>
 <form action="/createContract" method="post">
     <label>Enter Contract date start</label>
-    <input type="date" name="contractDateStart" placeholder="Contract Date Start">
+    <input type="date" name="contractDateStart" placeholder="Contract Date Start"> <br> <br>
     <label>Enter Contract date end</label>
     <input type="date" name="contractDateEnd" placeholder="Contract Date End">
+    <br>
+    <br>
     <label>Enter Max KM</label>
     <input type="text" name="maxKM" placeholder="MaxKM">
     <label>Enter Start Odometer</label>
     <input type="text" name="startOdometer" placeholder="Start Odometer">
     <input type="hidden" name="customerID" th:value="${customerid}">
     <input type="hidden" name="plateNumber" th:value="${platenumber}">
-    <input type="submit" value="Create new contract" style="color: #4CAF50">
+    <input type="submit" value="Create new contract">
 </form>
 </div>
 </body>
